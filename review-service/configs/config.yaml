@@ -1,0 +1,25 @@
+server:
+  http:
+    addr: 0.0.0.0:8482
+    timeout: 1s
+  grpc:
+    addr: 0.0.0.0:9492
+    timeout: 1s
+data:
+  database:
+    driver: mysql
+    source: root:root@tcp(127.0.0.1:3306)/review?parseTime=True&loc=Local
+  redis:
+    addr: 127.0.0.1:6379
+    read_timeout: 0.2s
+    write_timeout: 0.2s
+snowflake:
+  start_time: "2024-03-01"
+  machine_id: 1
+consul:
+  address: "127.0.0.1:8500"
+  scheme: http
+elasticsearch:
+  addresses:
+    - "http://localhost:9200"
+  index: "review"

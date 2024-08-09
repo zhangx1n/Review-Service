@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package api.review.v1;
+
+import "errors/errors.proto";
+
+option go_package = "review-service/api/review/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.review.v1";
+
+enum ErrorReason{
+  option (errors.default_code)=500;
+  NEED_LOGIN = 0 [(errors.code)=401];
+  DB_FAILED = 1 [(errors.code)=500];
+
+  APPEAL_AUDITED = 97 [(errors.code)=400];
+  REVIEW_APPEALED =98 [(errors.code)=400];
+  INVALID_PARAMS = 99;
+  ORDER_REVIEWED = 100 [(errors.code)=400];
+  REVIEW_REPLIED = 101 [(errors.code)=400];
+}
