@@ -1,6 +1,5 @@
 # A backend system for review service using Golang.
-The project is the modified and enriched version of Qimi's online courses. If there is any inferingement, please contact me for deletion.
-Course Address： [course address](https://study.163.com/course/courseMain.htm?courseId=1212937804)
+
 ## QuickView For Codes
 ### review-service: providing Remote Process Calls for users, stores and audits.
 
